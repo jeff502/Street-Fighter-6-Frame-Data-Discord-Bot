@@ -31,9 +31,7 @@ Getting Started
 
 Create a .env file in the project directory and add the following line, replacing <DISCORD_TOKEN> with your Discord API token:
 
-makefile
-
-DISCORD_TOKEN=<DISCORD_TOKEN>
+`DISCORD_TOKEN=<DISCORD_TOKEN>`
 
 Run the bot by executing the following command:
 
