@@ -55,6 +55,7 @@ The bot recognizes the following commands:
     for jumping attacks add `j` to to move input. 
     for supers and ex moves use the appropriate button command (`p`, `k`, `pp`, `kk`).
     Commonly used aliases for moves and characters are supported. (roundhouse, gief, sim, lp, jab, etc)
+    Charge moves shoud be treated as simply `46` or `28`.
     
 Contributing
 
