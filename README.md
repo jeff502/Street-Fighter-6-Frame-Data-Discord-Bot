@@ -27,7 +27,7 @@ Getting Started
 
     Install the required dependencies by running the following command:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 Create a .env file in the project directory and add the following line, replacing <DISCORD_TOKEN> with your Discord API token:
 
