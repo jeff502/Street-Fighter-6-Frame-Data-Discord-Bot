@@ -48,6 +48,9 @@ The bot recognizes the following commands:
 
     `!fd CHARACTER_NAME MOVE_AND_MOTION`: Retrieves move data for the specified character and motion/move. The character name should be provided in the command, followed by the motion or move notation. For moves with follow-ups, use a ~ delimiter between the move inputs. All data will be provided for moves with multiple differences. E.G. wind stock, held versions, FSE, etc.
 
+    Some examples: `!fd ken lpdp`, `!fd dj Jroudhouse' `!fd zangief 720p`, `!fd dj 236236k`, `!fd jamie 2HK~HK~P`.
+
+    Capitalization isn't required, '5' is not required for neutral inputs, for jumping attacks add `j` to to move input, for supers and ex moves, use the appropriate button command (`p`, `k`, `pp`, `kk`) 
 Contributing
 
 If you would like to contribute to this project, feel free to fork the repository and submit pull requests with your changes. Make sure to follow the existing code style and provide a clear description of your modifications.
