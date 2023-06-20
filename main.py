@@ -24,7 +24,6 @@ async def on_ready():
 
 @client.event
 async def on_message(message: discord.message.Message):
-    print(type(message))
     """
     Listens for user message. If a message contains "!fd", send that message to get_data()
     Post to discord if the requirements are met. ("!fd character_name motion input")
@@ -35,11 +34,10 @@ async def on_message(message: discord.message.Message):
     user_message: str = str(message.content).lower()
     channel: str = str(message.channel.id)
 
-    print(message)
-    print(f"{username}: {user_message} | {channel}")
+
     if message.author == client.user or message.author.bot is True:
         return
-    if message.content.startswith("!fdhelp"):
+    if message.content.startswith("!fdhelp") or message.content.startswith("/fdhelp"):
         await message.channel.send(
             f"{username} Use the format: `!fd character motion/move` E.G.: `!fd Ken DPLP`.\n"
             f"For moves with follow ups, use a `~` delimiter between the move inputs. E.G.: !fd Ken MP~HP \n"
@@ -47,7 +45,7 @@ async def on_message(message: discord.message.Message):
         )
         return
 
-    if message.content.startswith("!fd"):
+    if message.content.startswith("!fd") or message.content.startswith("/fd"):
         user_msg: list = user_message.split()
 
         user_character: str = user_msg[1].title()
@@ -57,7 +55,7 @@ async def on_message(message: discord.message.Message):
         replace_user_input: str = replace_input(user_character_input)
         rearranged_user_input: str = rearrange_input(replace_user_input)
 
-        bot_msg: str  = get_move_data(character, rearranged_user_input)
+        bot_msg: str = get_move_data(character, rearranged_user_input)
 
         # Split this into two different error msgs. One for move and one for character. Possibly 3 for input
         if bot_msg is False:
