@@ -58,6 +58,7 @@ The bot recognizes the following commands:
     Charge moves shoud be treated as simply `46` or `28`.
 
 Hosting this bot yourself
+
     Head to https://discord.com/developers/applications Click on New Application
     Name your app
     Go to Bot
